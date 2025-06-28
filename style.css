@@ -1,0 +1,49 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  background-color: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+input {
+  background: #f0f0f0;
+}
+button {
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+}
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+.password-wrapper {
+  position: relative;
+}
+#toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
