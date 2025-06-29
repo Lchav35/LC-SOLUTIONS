@@ -57,6 +57,12 @@ h2 {
   margin-bottom: 30px;
 }
 
+.input-label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
 .input-field {
   position: relative;
   display: flex;
