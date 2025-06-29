@@ -99,7 +99,7 @@ input[type="password"] {
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   margin-top: 16px;
 }
 
@@ -116,33 +116,15 @@ input[type="password"] {
   box-sizing: border-box;
   border: none;
   width: 100%;
+  margin: 0; /* <- Remove qualquer espaçamento extra */
 }
 
-.btn {
-  background: #ffd700;
-  color: #000;
-}
-
-.btn:hover {
-  background: #e5c100;
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 1px solid #ffd700;
-  color: #ffd700;
-}
-
-.btn.secondary:hover {
-  background: #ffd70010;
-}
-
-/* Botões lado a lado em telas maiores */
+/* Alinha lado a lado em telas maiores */
 @media (min-width: 480px) {
   .btn-group {
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
+    gap: 12px;
   }
 
   .btn,
