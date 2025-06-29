@@ -4,53 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LCS - Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="login-wrapper">
-    <div class="background-overlay"></div>
+  <div class="background-overlay"></div>
+  <div class="login-box">
+    <div class="logo-text">LCS</div>
+    <h2>Bem-vindo</h2>
 
-    <div class="login-box">
-      <div class="logo-text">LCS</div>
-      <h2>Bem-vindo</h2>
+    <form>
+      <label for="user">Usuário</label>
+      <div class="input-field">
+        <input type="text" id="user" placeholder="Digite seu login" required />
+      </div>
 
-      <form>
-        <label for="user" class="input-label">Usuário</label>
-        <div class="input-field">
-          <i class="fa fa-user"></i>
-          <input type="text" id="user" name="user" placeholder="Digite seu login" required />
-        </div>
+      <label for="password">Senha</label>
+      <div class="input-field">
+        <input type="password" id="password" placeholder="Digite sua senha" required />
+        <span class="toggle" onclick="togglePassword()">👁️</span>
+      </div>
 
-        <label for="password" class="input-label">Senha</label>
-        <div class="input-field">
-          <i class="fa fa-lock"></i>
-          <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
-          <i class="fa fa-eye toggle-password" onclick="togglePassword()"></i>
-        </div>
+      <div class="remember">
+        <label><input type="checkbox" /> Lembrar login</label>
+      </div>
 
-        <div class="options">
-          <label><input type="checkbox" /> Lembrar login</label>
-        </div>
+      <button type="submit" class="btn">Entrar</button>
 
-        <div class="glass-buttons">
-          <button type="submit" class="btn">Entrar</button>
-          <p class="cadastro-link">
-  Ainda não tem conta?
-  <a href="cadastro.html">Cadastre-se aqui</a>
-</p>
-          <button type="button" class="btn secondary">Cadastrar</button>
-        </div>
-      </form>
-    </div>
+     <a href="cadastro.html" class="btn secondary">Cadastrar</a>
+      </p>
+    </form>
   </div>
 
   <script>
     function togglePassword() {
-      const input = document.getElementById("password");
-      input.type = input.type === "password" ? "text" : "password";
+      const input = document.getElementById('password');
+      input.type = input.type === 'password' ? 'text' : 'password';
     }
   </script>
 </body>
