@@ -99,7 +99,7 @@ input[type="password"] {
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   margin-top: 12px;
 }
 
