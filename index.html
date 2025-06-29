@@ -2,20 +2,50 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LCS - Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-wrapper">
     <div class="background-overlay"></div>
+
     <div class="login-box">
-      <img src="logo-lcs.png" alt="Logo LCS" class="logo-img" />
+      <img src="assets/logo-lcs.png" alt="Logo LCS" class="logo-img" />
       <h2>Bem-vindo</h2>
+
       <form>
+        <label for="user" class="input-label">Usuário</label>
         <div class="input-field">
           <i class="fa fa-user"></i>
-          <input type="text" id="user" placeholder="Usuário" required>
+          <input type="text" id="user" name="user" placeholder="Digite seu login" required />
         </div>
+
+        <label for="password" class="input-label">Senha</label>
         <div class="input-field">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
+          <i class="fa fa-eye toggle-password" onclick="togglePassword()"></i>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" /> Lembrar login</label>
+        </div>
+
+        <div class="glass-buttons">
+          <button type="submit" class="btn">Entrar</button>
+          <button type="button" class="btn secondary">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
