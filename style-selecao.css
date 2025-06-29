@@ -70,31 +70,30 @@ h2 {
   }
 }
 
-.card {
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   padding: 20px;
-  text-align: center;
   text-decoration: none;
   color: #ffd700;
-  border: 1px solid #ffd70022;
+  font-weight: 500;
   transition: all 0.3s ease;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid #ffd70022;
 }
 
-.card span {
-  margin-top: 8px;
-  font-size: 0.9rem;
-}
-
-.card:hover {
-  background: rgba(255, 255, 255, 0.09);
-  transform: scale(1.03);
+.card-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.04);
   color: #fff;
+}
+
+.card-item span {
+  margin-top: 8px;
+  font-size: 0.95rem;
 }
 
 .voltar {
