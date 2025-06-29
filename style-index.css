@@ -97,30 +97,32 @@ input[type="password"] {
 
 .btn,
 .btn.secondary {
-  display: inline-block;
+  display: block;
   width: 100%;
   padding: 12px;
-  border-radius: 8px;
-  font-weight: bold;
   font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
-  margin-top: 10px;
   transition: background 0.3s ease;
-  cursor: pointer;
+  border: none;
   box-sizing: border-box;
+  margin-top: 10px;
 }
 
+/* Botão padrão */
 .btn {
-  background: #ffd700;
+  background-color: #ffd700;
   color: #000;
-  border: none;
 }
 
 .btn:hover {
-  background: #e5c100;
+  background-color: #e5c100;
 }
 
+/* Botão secundário */
 .btn.secondary {
   background: transparent;
   border: 1px solid #ffd700;
@@ -130,3 +132,4 @@ input[type="password"] {
 .btn.secondary:hover {
   background: #ffd70010;
 }
+
