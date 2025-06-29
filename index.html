@@ -3,77 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro - LCS</title>
-  <link rel="stylesheet" href="style-cadastro.css" />
+  <title>LCS - Login</title>
+  <link rel="stylesheet" href="style-index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="form-overlay"></div>
-
-  <div class="form-box">
+  <div class="overlay"></div>
+  <div class="login-container">
     <div class="logo-text">LCS</div>
-    <h2>Cadastro de Usuário</h2>
-
-    <label for="tipo">Tipo de cadastro</label>
-    <select id="tipo" onchange="mostrarCampos()">
-      <option disabled selected>Selecione...</option>
-      <option value="cpf">Pessoa Física (CPF)</option>
-      <option value="cnpj">Pessoa Jurídica (CNPJ)</option>
-      <option value="produto">Produto</option>
-      <option value="servico">Serviço</option>
-    </select>
+    <h2>Bem-vindo de volta</h2>
 
     <form>
-      <div class="campo-comum">
-        <label>Nome completo</label>
-        <input type="text" />
+      <label for="user">Usuário</label>
+      <input type="text" id="user" placeholder="Digite seu login" required />
 
-        <label>Email</label>
-        <input type="email" />
+      <label for="password">Senha</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Digite sua senha" required />
+        <span class="eye-toggle" onclick="togglePassword()">👁️</span>
       </div>
 
-      <div id="cpf" class="campo-extra oculto">
-        <label>CPF</label>
-        <input type="text" placeholder="000.000.000-00" />
+      <div class="remember">
+        <label><input type="checkbox" /> Lembrar login</label>
       </div>
 
-      <div id="cnpj" class="campo-extra oculto">
-        <label>CNPJ</label>
-        <input type="text" placeholder="00.000.000/0001-00" />
-      </div>
-
-      <div id="produto" class="campo-extra oculto">
-        <label>Nome do Produto</label>
-        <input type="text" />
-      </div>
-
-      <div id="servico" class="campo-extra oculto">
-        <label>Descrição do Serviço</label>
-        <textarea rows="3"></textarea>
-      </div>
-
-      <label>Nome de usuário</label>
-      <input type="text" />
-
-      <label>Senha</label>
-      <input type="password" />
-
-      <label>Confirmar senha</label>
-      <input type="password" />
-
-      <button type="submit" class="btn">Cadastrar</button>
+      <button type="submit" class="btn">Entrar</button>
+      <a href="cadastro.html" class="btn secondary">Cadastrar</a>
     </form>
   </div>
 
   <script>
-    function mostrarCampos() {
-      const tipo = document.getElementById("tipo").value;
-      ["cpf", "cnpj", "produto", "servico"].forEach(id => {
-        document.getElementById(id).classList.add("oculto");
-      });
-      if (document.getElementById(tipo)) {
-        document.getElementById(tipo).classList.remove("oculto");
-      }
+    function togglePassword() {
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
     }
   </script>
 </body>
