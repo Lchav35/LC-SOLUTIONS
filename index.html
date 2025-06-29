@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LCS - Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,27 +14,23 @@
     <div class="login-box">
       <img src="assets/logo-lcs.png" alt="Logo LCS" class="logo-img" />
       <h2>Bem-vindo</h2>
-      
+
       <form>
-        <div class="input-label">
-          <label for="user">Usuário</label>
-        </div>
+        <label for="user" class="input-label">Usuário</label>
         <div class="input-field">
           <i class="fa fa-user"></i>
-          <input type="text" id="user" placeholder="Digite seu login" required>
+          <input type="text" id="user" name="user" placeholder="Digite seu login" required />
         </div>
 
-        <div class="input-label">
-          <label for="password">Senha</label>
-        </div>
+        <label for="password" class="input-label">Senha</label>
         <div class="input-field">
           <i class="fa fa-lock"></i>
-          <input type="password" id="password" placeholder="Digite sua senha" required>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
           <i class="fa fa-eye toggle-password" onclick="togglePassword()"></i>
         </div>
 
         <div class="options">
-          <label><input type="checkbox"> Lembrar login</label>
+          <label><input type="checkbox" /> Lembrar login</label>
         </div>
 
         <div class="glass-buttons">
