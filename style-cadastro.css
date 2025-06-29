@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  height: 100vh;
   font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
   background: linear-gradient(135deg, #0f0f0f, #1d1d1d);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   position: relative;
 }
 
@@ -22,9 +23,87 @@ body {
 .form-box {
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(20px);
-  padding: 40px;
+  padding: 36px 30px;
   border-radius: 16px;
   width: 100%;
   max-width: 500px;
   z-index: 1;
-  box-shadow: 0 0 40px rgba
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffd700;
+  animation: pulseLogo 3s infinite ease-in-out;
+  letter-spacing: 3px;
+}
+
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 8px #ffd700;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 16px #fff5aa;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.88rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  color: #fff;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e5c100;
+}
+
+.campo-extra,
+.oculto {
+  display: none;
+}
+
+.campo-extra:not(.oculto) {
+  margin-top: 10px;
+}
