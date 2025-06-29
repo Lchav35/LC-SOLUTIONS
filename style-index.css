@@ -99,8 +99,8 @@ input[type="password"] {
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-top: 12px;
+  gap: 14px; /* Aqui você controla a distância entre os botões */
+  margin-top: 16px;
 }
 
 .btn,
