@@ -1,44 +1,44 @@
 body {
   margin: 0;
-  height: 100vh;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
   font-size: 14px;
   background: linear-gradient(135deg, #0f0f0f, #1d1d1d);
   color: #fff;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.form-overlay {
+.overlay {
   background: url('main/background-lcs.png') center/cover no-repeat;
   opacity: 0.15;
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 0;
 }
 
-.form-box {
-  background: rgba(255,255,255,0.06);
+.form-container {
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(20px);
-  padding: 36px 30px;
+  padding: 36px 28px;
   border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
   width: 100%;
-  max-width: 500px;
+  max-width: 440px;
   z-index: 1;
-  box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
 .logo-text {
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
-  text-align: center;
-  margin-bottom: 20px;
   color: #ffd700;
+  text-align: center;
+  margin-bottom: 14px;
   animation: pulseLogo 3s infinite ease-in-out;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 @keyframes pulseLogo {
@@ -55,31 +55,24 @@ body {
 h2 {
   text-align: center;
   font-size: 1.15rem;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 label {
   display: block;
-  margin-top: 12px;
-  margin-bottom: 4px;
-  font-size: 0.88rem;
+  margin: 10px 0 4px;
+  font-size: 0.9rem;
 }
 
-input,
-select,
-textarea {
+input {
   width: 100%;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid #444;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #333;
   border-radius: 8px;
-  padding: 8px 10px;
-  font-size: 0.95rem;
   color: #fff;
+  font-size: 0.95rem;
   outline: none;
-}
-
-textarea {
-  resize: none;
 }
 
 .btn {
@@ -90,20 +83,24 @@ textarea {
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 14px;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-align: center;
+  display: block;
+  text-decoration: none;
 }
 
 .btn:hover {
   background: #e5c100;
 }
 
-.campo-extra,
-.oculto {
-  display: none;
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #ffd700;
+  color: #ffd700;
 }
 
-.campo-extra:not(.oculto) {
-  margin-top: 10px;
+.btn.secondary:hover {
+  background: #ffd70010;
 }
