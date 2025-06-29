@@ -1,87 +1,116 @@
 body {
   margin: 0;
-  background: url('main/background-lcs.png') center/cover no-repeat;
-  background-color: #111;
+  height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
+  background: linear-gradient(135deg, #0f0f0f, #1d1d1d);
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  position: relative;
 }
 
-.form-wrapper {
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 40px;
+.background-overlay {
+  background: url('main/background-lcs.png') center/cover no-repeat;
+  opacity: 0.15;
+  position: absolute;
   width: 100%;
-  max-width: 500px;
+  height: 100%;
+  z-index: 0;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 40px 30px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffd700;
+  animation: pulseLogo 3s infinite ease-in-out;
+  letter-spacing: 4px;
+}
+
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 8px #ffd700;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px #fff5aa;
+  }
 }
 
 h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #ffd700;
 }
 
-.input-label,
 label {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-size: 0.95rem;
+  margin: 12px 0 5px;
+  font-size: 0.9rem;
 }
 
-input,
-textarea,
-select {
-  width: 100%;
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #444;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 0.95rem;
+}
+
+.input-field input {
+  background: transparent;
+  border: none;
   outline: none;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
 }
 
-textarea {
-  resize: none;
+.toggle {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #bbb;
 }
 
-.select-field {
-  margin-bottom: 20px;
+.remember {
+  margin: 15px 0;
+  font-size: 0.9rem;
 }
 
 .btn {
-  margin-top: 30px;
   width: 100%;
   padding: 12px;
-  background-color: #ffd700;
-  border: none;
-  border-radius: 8px;
+  background: #ffd700;
   color: #000;
   font-weight: bold;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #e5c100;
+  background: #e5c100;
 }
 
-.grupo-campos {
-  margin-top: 10px;
-}
-
-.oculto {
-  display: none;
-}
 .cadastro-link {
   text-align: center;
-  margin-top: 10px;
   font-size: 0.9rem;
 }
 
