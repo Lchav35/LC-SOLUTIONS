@@ -1,23 +1,24 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  margin: 0;
-  background: linear-gradient(to right, #111, #222);
   height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1d1d1d);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .background-overlay {
   background: url('background-lcs.jpg') center/cover no-repeat;
-  opacity: 0.05;
+  opacity: 0.15;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -25,29 +26,28 @@ body {
 }
 
 .login-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
 
 .login-box {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
   padding: 40px;
   width: 100%;
   max-width: 400px;
-  backdrop-filter: blur(15px);
-  z-index: 1;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
 }
 
 .logo-img {
-  width: 100px;
-  margin: 0 auto 20px;
+  width: 120px;
   display: block;
-  filter: drop-shadow(0 0 6px #00ffc8);
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 0 8px #ffd700);
 }
 
 h2 {
@@ -56,13 +56,18 @@ h2 {
 }
 
 .input-field {
+  position: relative;
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.1);
-  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
   padding: 10px;
-  border-radius: 8px;
-  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field i {
+  color: #ffd700;
+  margin-left: 5px;
 }
 
 .input-field input {
@@ -70,63 +75,60 @@ h2 {
   border: none;
   background: transparent;
   color: #fff;
+  padding: 0 10px;
   font-size: 1rem;
   outline: none;
-  padding: 0 10px;
 }
 
-.input-field i.toggle-password {
+.toggle-password {
   position: absolute;
-  right: 10px;
+  right: 15px;
   cursor: pointer;
-  color: #ccc;
+  color: #bbb;
 }
 
 .options {
-  display: flex;
-  justify-content: flex-start;
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .glass-buttons {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
+  box-shadow: 0 4px 30px rgba(255, 215, 0, 0.1);
 }
 
 .btn {
   width: 100%;
   padding: 12px;
-  background: #00ffc8;
+  background: #ffd700;
   border: none;
   border-radius: 8px;
   font-weight: bold;
-  cursor: pointer;
   color: #000;
   margin-bottom: 10px;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #00bfa6;
+  background: #e5c100;
 }
 
 .btn.secondary {
   background: transparent;
-  color: #00ffc8;
-  border: 1px solid #00ffc8;
+  color: #ffd700;
+  border: 1px solid #ffd700;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .login-box {
     padding: 30px 20px;
   }
 
   .logo-img {
-    width: 80px;
+    width: 90px;
   }
 }
