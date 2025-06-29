@@ -1,44 +1,30 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | LC Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css"> <!-- Lembre-se de salvar o CSS num arquivo chamado style.css -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - LCS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h2>Bem-vindo de volta 👋</h2>
-
+  <div class="background-logo"></div>
+  <div class="login-container">
+    <h2>Bem-vindo à LCS</h2>
     <form>
-      <div class="input-wrapper">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="Usuário" required>
+      <div class="input-group">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" required />
+        <span class="icon-user"></span>
       </div>
-
-      <div class="input-wrapper password-wrapper">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Senha" id="senha" required>
-        <button type="button" id="toggle-senha"><i class="fas fa-eye"></i></button>
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" required />
+        <span class="icon-eye" onclick="togglePassword()"></span>
       </div>
-
-      <button type="submit">Entrar</button>
-      <a href="#">Esqueceu a senha?</a>
+      <button type="submit" class="btn-login">Entrar</button>
+      <button type="button" class="btn-register">Cadastrar</button>
     </form>
   </div>
-
-  <script>
-    const toggleBtn = document.getElementById('toggle-senha');
-    const senhaInput = document.getElementById('senha');
-
-    toggleBtn.addEventListener('click', () => {
-      const type = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
-      senhaInput.setAttribute('type', type);
-      toggleBtn.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
-    });
-  </script>
 </body>
 </html>
