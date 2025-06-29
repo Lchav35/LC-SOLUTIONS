@@ -54,44 +54,43 @@ body {
 
 h2 {
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   text-align: center;
 }
 
-.opcoes-grid {
+.card-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
 }
 
-@media (min-width: 500px) {
-  .opcoes-grid {
+@media (min-width: 480px) {
+  .card-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.opcao {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  padding: 20px;
+  backdrop-filter: blur(10px);
+  padding: 18px;
   border-radius: 12px;
   text-decoration: none;
   color: #ffd700;
+  border: 1px solid #ffd70022;
   transition: transform 0.3s ease, background 0.3s ease;
-  border: 1px solid #ffd70020;
   text-align: center;
 }
 
-.opcao:hover {
-  transform: scale(1.03);
+.card:hover {
+  transform: scale(1.04);
   background: rgba(255, 255, 255, 0.08);
 }
 
-.opcao span {
+.card span {
   margin-top: 8px;
   font-size: 0.95rem;
 }
