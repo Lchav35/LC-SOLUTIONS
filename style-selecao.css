@@ -80,3 +80,18 @@ h2 {
 .cadastro-lista a:hover {
   color: #fff;
 }
+
+.voltar {
+  margin-top: 24px;
+}
+
+.voltar a {
+  font-size: 0.9rem;
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.voltar a:hover {
+  color: #fff;
+}
