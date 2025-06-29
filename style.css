@@ -141,3 +141,17 @@ h2 {
     width: 90px;
   }
 }
+.logo-img.animated {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #ffd700);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px #ffe866);
+  }
+}
