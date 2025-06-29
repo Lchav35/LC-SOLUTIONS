@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  background: linear-gradient(135deg, #0f0f0f, #1d1d1d);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  background: url('main/background-lcs.png') center/cover no-repeat;
+  opacity: 0.15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  padding: 36px 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 12px;
+  animation: pulseLogo 3s infinite ease-in-out;
+  letter-spacing: 2px;
+}
+
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 8px #ffd700;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 16px #fff5aa;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 4px;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.remember {
+  margin: 12px 0;
+  font-size: 0.85rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #e5c100;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  margin-top: 8px;
+}
+
+.btn.secondary:hover {
+  background: #ffd70010;
+}
