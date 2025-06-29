@@ -3,80 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro - LCS</title>
-  <link rel="stylesheet" href="style-cadastro.css" />
+  <title>Seleção de Cadastro - LCS</title>
+  <link rel="stylesheet" href="style-selecao.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="form-overlay"></div>
-  <div class="form-box">
-    <h2>Cadastro de Usuário</h2>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="logo-text">LCS</div>
+    <h2>Selecione o tipo de cadastro</h2>
 
-    <label for="tipo">Tipo de cadastro</label>
-    <select id="tipo" onchange="mostrarCampos()">
-      <option disabled selected>Escolha...</option>
-      <option value="cpf">Pessoa Física</option>
-      <option value="cnpj">Pessoa Jurídica</option>
-      <option value="produto">Produto</option>
-      <option value="servico">Serviço</option>
-    </select>
-
-    <form>
-      <div id="comum">
-        <label>Nome completo</label>
-        <input type="text" />
-
-        <label>Email</label>
-        <input type="email" />
-      </div>
-
-      <div id="cpf" class="hide">
-        <label>CPF</label>
-        <input type="text" placeholder="000.000.000-00" />
-      </div>
-
-      <div id="cnpj" class="hide">
-        <label>CNPJ</label>
-        <input type="text" placeholder="00.000.000/0001-00" />
-      </div>
-
-      <div id="produto" class="hide">
-        <label>Nome do produto</label>
-        <input type="text" />
-      </div>
-
-      <div id="servico" class="hide">
-        <label>Descrição do serviço</label>
-        <textarea rows="3"></textarea>
-      </div>
-
-      <label>Usuário</label>
-      <input type="text" />
-
-      <label>Senha</label>
-      <input type="password" />
-
-      <label>Confirmar senha</label>
-      <input type="password" />
-
-      <button type="submit" class="btn">Cadastrar</button>
-
-      <p class="voltar">
-        Já tem conta?
-        <a href="index.html">Voltar para login</a>
-      </p>
-    </form>
+    <div class="cadastro-lista">
+      <a href="cadastro-usuario.html">👤 Usuário</a>
+      <a href="cadastro-pessoa.html">🧑 Pessoa Física</a>
+      <a href="cadastro-empresa.html">🏢 Empresa (CNPJ)</a>
+      <a href="cadastro-produto.html">📦 Produto</a>
+      <a href="cadastro-servico.html">🛠️ Serviço</a>
+    </div>
   </div>
-
-  <script>
-    function mostrarCampos() {
-      const tipo = document.getElementById("tipo").value;
-      ["cpf", "cnpj", "produto", "servico"].forEach(id => {
-        document.getElementById(id).classList.add("hide");
-      });
-      if (document.getElementById(tipo)) {
-        document.getElementById(tipo).classList.remove("hide");
-      }
-    }
-  </script>
 </body>
 </html>
