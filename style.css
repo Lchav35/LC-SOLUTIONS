@@ -58,6 +58,7 @@ h2 {
 }
 
 .input-label {
+  display: block;
   margin-bottom: 6px;
   font-size: 0.9rem;
   color: #ccc;
