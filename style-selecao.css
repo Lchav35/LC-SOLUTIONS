@@ -99,3 +99,25 @@ h2 {
   background: #ffd70010;
   transform: scale(1.05);
 }
+
+.cadastro-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cadastro-lista a {
+  font-size: 1.05rem;
+  color: #ffd700;
+  text-decoration: none;
+  padding: 8px 0;
+  border-left: 3px solid #ffd700;
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.cadastro-lista a:hover {
+  color: #fff;
+}
