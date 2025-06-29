@@ -57,12 +57,21 @@ h2 {
   margin-bottom: 24px;
 }
 
-.card-grid {
+.card-grid.column {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
 }
+
+.card-grid.column .card {
+  width: 100%;
+  justify-content: flex-start;
+  font-size: 1.1rem;
+  padding: 14px 18px;
+  text-align: left;
+}
+
 
 .card {
   background: rgba(255, 255, 255, 0.07);
