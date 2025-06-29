@@ -17,7 +17,7 @@ body {
 }
 
 .background-overlay {
-  background: url('main/background-lcs.jpg') center/cover no-repeat;
+  background: url('main/background-lcs.png') center/cover no-repeat;
   opacity: 0.15;
   position: absolute;
   width: 100%;
