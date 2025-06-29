@@ -16,7 +16,7 @@ body {
 }
 
 .background-overlay {
-  background: url('sua-imagem-de-logo-ou-padrão.jpg') center/cover no-repeat;
+  background: url('background-lcs.jpg') center/cover no-repeat;
   opacity: 0.05;
   position: absolute;
   width: 100%;
@@ -43,13 +43,16 @@ body {
   z-index: 1;
 }
 
-.logo {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+.logo-img {
+  width: 100px;
+  margin: 0 auto 20px;
+  display: block;
+  filter: drop-shadow(0 0 6px #00ffc8);
+}
+
+h2 {
   text-align: center;
-  color: #00ffc8;
-  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
 .input-field {
@@ -86,6 +89,15 @@ body {
   margin-bottom: 20px;
 }
 
+.glass-buttons {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
 .btn {
   width: 100%;
   padding: 12px;
@@ -112,5 +124,9 @@ body {
 @media screen and (max-width: 480px) {
   .login-box {
     padding: 30px 20px;
+  }
+
+  .logo-img {
+    width: 80px;
   }
 }
