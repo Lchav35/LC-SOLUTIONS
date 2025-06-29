@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - LCS</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LCS - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background-logo"></div>
-  <div class="login-container">
-    <h2>Bem-vindo à LCS</h2>
-    <form>
-      <div class="input-group">
-        <label for="username">Usuário</label>
-        <input type="text" id="username" required />
-        <span class="icon-user"></span>
-      </div>
-      <div class="input-group">
-        <label for="password">Senha</label>
-        <input type="password" id="password" required />
-        <span class="icon-eye" onclick="togglePassword()"></span>
-      </div>
-      <button type="submit" class="btn-login">Entrar</button>
-      <button type="button" class="btn-register">Cadastrar</button>
-    </form>
-  </div>
-</body>
-</html>
+  <div class="login-wrapper">
+    <div class="background-overlay"></div>
+    <div class="login-box">
+      <div class="logo">LCS</div>
+      <h2>Bem-vindo</h2>
+      <form>
+        <div class="input-field">
+          <label for="user"><i class="fa fa-user"></i></label>
+          <input type="text" id="user" placeholder="Usuário" required>
+        </div>
+        <div class="input-field">
+          <label for="password"><i class="fa fa-lock"></i></label>
+          <input type="password" id="password" placeholder="Senha" required>
+          <i class="fa fa-eye toggle-password" onclick="togglePassword()"></i>
+        </div>
+        <div class="options
